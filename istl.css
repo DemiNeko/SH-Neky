@@ -52,25 +52,3 @@ a.button:hover {
     background-color: #f0f0f0;
     transform: translateY(-2px);
 }
-
-/* ===== 📱 Адаптивность для мобильных ===== */
-@media (max-width: 600px) {
-    body {
-        padding: 20px;
-        background-attachment: scroll; /* Улучшает производительность на мобилках */
-        height: auto;
-    }
-
-    .container {
-        padding: 30px 20px;
-    }
-
-    h1 {
-        font-size: 1.8em;
-    }
-
-    a.button {
-        font-size: 1em;
-        padding: 12px 20px;
-    }
-}
