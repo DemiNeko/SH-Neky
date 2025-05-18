@@ -12,28 +12,30 @@ body {
     align-items: center;
     height: 100vh;
     color: #fff;
-  }
-  
-  .container {
+    text-align: left; /* <-- Выравнивание текста слева */
+}
+
+.container {
     background: transparent;
     padding: 50px 40px;
     border-radius: 20px;
-    text-align: center;
     /* box-shadow: 0 0 20px rgba(0,0,0,0.3); */
     /* backdrop-filter: blur(10px); */
     width: 90%;
     max-width: 500px;
-  }
-  
-  h1 {
+    text-align: left; /* <-- Контент в контейнере тоже слева */
+}
+
+h1 {
     font-size: 2.4em;
     margin-bottom: 40px;
     font-weight: bold;
-  }
-  
-  a.button {
+    text-align: left; /* <-- Заголовок слева */
+}
+
+a.button {
     display: block;
-    margin: 15px auto;
+    margin: 15px 0;
     padding: 14px 24px;
     width: 100%;
     max-width: 320px;
@@ -43,10 +45,32 @@ body {
     border-radius: 10px;
     font-size: 1.1em;
     transition: background 0.3s, transform 0.2s;
-  }
-  
-  a.button:hover {
+    text-align: center; /* <-- Кнопки тоже выравнены слева */
+}
+
+a.button:hover {
     background-color: #f0f0f0;
     transform: translateY(-2px);
-  }
-  
+}
+
+/* ===== 📱 Адаптивность для мобильных ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+        background-attachment: scroll; /* Улучшает производительность на мобилках */
+        height: auto;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    a.button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
